@@ -4,17 +4,6 @@
 <meta charset="utf-8">
 <title>Change Image on Hover in CSS</title>
 <style>
-    .card {
-
-        margin: 50px;
-    }
-    .card:hover {
-        background: url("https://scontent.fymy1-1.fna.fbcdn.net/v/t1.0-9/72217167_1394143540742128_7196940547443916800_o.jpg?_nc_cat=107&_nc_sid=85a577&_nc_ohc=Rxd1Cp6RbUgAX_TI1T3&_nc_ht=scontent.fymy1-1.fna&oh=5aa1698e07f14f0027b3e396f04d4158&oe=5ED65CDD") no-repeat;
-        width: 1300px;
-        height: 1950px;
-        margin: 50px;
-        color: transparent;
-    }
     .text:hover {
         color: transparent;
     }
@@ -22,9 +11,36 @@
         font-size:30px
     }
 </style>
+<script>
+        var sites = [
+        "https://scontent.fymy1-2.fna.fbcdn.net/v/t1.0-9/42803653_1129708843852267_3435324283126022144_o.jpg?_nc_cat=110&_nc_sid=7aed08&_nc_ohc=d1LiA4BKjVkAX_482aq&_nc_ht=scontent.fymy1-2.fna&oh=490a29ba1e5c406ed2987aac7a711523&oe=5ED65DE6",
+        "https://scontent.fymy1-1.fna.fbcdn.net/v/t1.0-9/72217167_1394143540742128_7196940547443916800_o.jpg?_nc_cat=107&_nc_sid=85a577&_nc_ohc=Rxd1Cp6RbUgAX_TI1T3&_nc_ht=scontent.fymy1-1.fna&oh=5aa1698e07f14f0027b3e396f04d4158&oe=5ED65CDD",
+        "https://scontent.fymy1-1.fna.fbcdn.net/v/t31.0-8/21415008_882816091874878_5241688635052743942_o.jpg?_nc_cat=104&_nc_sid=7aed08&_nc_ohc=0IEXtJFTmNEAX_mLQje&_nc_ht=scontent.fymy1-1.fna&oh=3f8680d9ca343b12bc3ebda7221859b3&oe=5ED52B2D",
+        "https://scontent.fymy1-2.fna.fbcdn.net/v/t1.0-9/15203133_719957968160692_7963478049569499725_n.jpg?_nc_cat=101&_nc_sid=7aed08&_nc_ohc=9ziKpLEo5C4AX9zohTt&_nc_ht=scontent.fymy1-2.fna&oh=c0f84b602c97741b2a2c9de45b380ddf&oe=5ED44A0D"
+        ];
+    
+        function randomSite() {
+            var i = parseInt(Math.random() * sites.length);
+            console.log(sites[i])
+            return sites[i];
+        }
+        function show() {
+            document.getElementById('myImg').src=randomSite();
+            myImg = document.getElementById("myImg");
+            myImg.style.width= "100px";
+            myImg.style.width= "100px";
+        }
+        function hide() {
+            myImg = document.getElementById("myImg")
+            myImg.style.width= "0px";
+            myImg.style.width= "0px";
+        }
+    </script>
 </head>
 <body>
-    <div class="card">
-        <div class="text">little bitch <div></div>
+        <div class="card">
+                <div class="text "  onmouseover= "show()" onmouseout= "hide()">little bitch </div>
+        <img id=myImg>
+
 </body>
 </html>      
